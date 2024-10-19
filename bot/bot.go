@@ -56,5 +56,5 @@ func Run () {
 			lastToken = token.TokenAddress
 		}
 	}
-	fmt.Println(lastToken)
+	fmt.Println("This is the last token------------------->", lastToken)
 }
