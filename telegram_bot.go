@@ -1,7 +1,7 @@
 package main
 
 import (
-	bot "github.com/DavidDamron/Solana-Bot"
+	bot "github.com/DavidDamron/SolanaTokenListBot"
 )
 
 func main() {
