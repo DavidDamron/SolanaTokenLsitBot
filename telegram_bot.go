@@ -1,8 +1,6 @@
 package main
 
-import (
-	bot "github.com/DavidDamron/SolanaTokenListBot"
-)
+import "github.com/DavidDamron/SolanaTokenLsitBot/bot"
 
 func main() {
 	bot.Run()
