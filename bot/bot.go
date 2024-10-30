@@ -64,4 +64,6 @@ func Run() {
 			break
 		}
 	}
+	fmt.Println("Current Token", currentToken)
+	fmt.Println("first Token", firstToken)
 }

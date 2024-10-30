@@ -9,6 +9,6 @@ import (
 func main() {
 	for true {
 		bot.Run()
-		time.Sleep(5 * time.Second)
+		time.Sleep(100 * time.Second)
 	}
 }
