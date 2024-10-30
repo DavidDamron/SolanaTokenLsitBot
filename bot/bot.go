@@ -29,8 +29,8 @@ func sendMessage(text string) {
 	}
 }
 
-func Run () {
-	var lastToken string
+func bot() {
+	// var lastToken string
 	resp, err := http.Get("https://api.dexscreener.com/token-profiles/latest/v1")
 	if err != nil {
 		fmt.Println("Error fetching data:", err)
@@ -53,8 +53,7 @@ func Run () {
 
 	for _, token := range tokendProfiles {
 		if token.ChainID == "solana" {
-			lastToken = token.TokenAddress
+			fmt.Println(token.TokenAddress)
 		}
 	}
-	fmt.Println("This is the last token---------------->", lastToken)
 }
