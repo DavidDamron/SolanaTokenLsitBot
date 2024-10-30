@@ -1,7 +1,14 @@
 package main
 
-import "github.com/DavidDamron/SolanaTokenLsitBot/bot"
+import (
+	"time"
+
+	"github.com/DavidDamron/SolanaTokenLsitBot/bot"
+)
 
 func main() {
-	bot.Run()
+	for true {
+		bot.Run()
+		time.Sleep(5 * time.Second)
+	}
 }

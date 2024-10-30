@@ -29,9 +29,10 @@ func sendMessage(text string) {
 	}
 }
 
+var firstToken string        // var first Token string
+var currentToken string = "" // current Token
+
 func Run() {
-	var firstToken string        // var first Token string
-	var currentToken string = "" // current Token
 	resp, err := http.Get("https://api.dexscreener.com/token-profiles/latest/v1")
 	if err != nil {
 		fmt.Println("Error fetching data:", err)
