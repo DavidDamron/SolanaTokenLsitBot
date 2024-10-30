@@ -30,7 +30,8 @@ func sendMessage(text string) {
 }
 
 func Run() {
-	// var lastToken string
+	var firstToken string        // var first Token string
+	var currentToken string = "" // current Token
 	resp, err := http.Get("https://api.dexscreener.com/token-profiles/latest/v1")
 	if err != nil {
 		fmt.Println("Error fetching data:", err)
@@ -53,7 +54,13 @@ func Run() {
 
 	for _, token := range tokendProfiles {
 		if token.ChainID == "solana" {
-			fmt.Println(token.TokenAddress)
+			firstToken = token.TokenAddress
+			if firstToken != currentToken {
+				currentToken = firstToken
+				message := "New Token Lunched\n%s" + currentToken
+				sendMessage(message)
+			}
+			break
 		}
 	}
 }
