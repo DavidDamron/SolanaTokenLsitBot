@@ -57,7 +57,7 @@ func Run() {
 			firstToken = token.TokenAddress
 			if firstToken != currentToken {
 				currentToken = firstToken
-				message := "New Token Lunched\n%s" + currentToken
+				message := "New Token Lunched\n" + currentToken
 				sendMessage(message)
 			}
 			break
