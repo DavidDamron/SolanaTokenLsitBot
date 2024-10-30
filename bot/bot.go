@@ -29,7 +29,7 @@ func sendMessage(text string) {
 	}
 }
 
-func bot() {
+func Run() {
 	// var lastToken string
 	resp, err := http.Get("https://api.dexscreener.com/token-profiles/latest/v1")
 	if err != nil {
